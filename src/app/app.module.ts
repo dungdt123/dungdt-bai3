@@ -20,6 +20,7 @@ import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductManagerComponent } from './product-manager/product-manager.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductAddComponent } from './product-add/product-add.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     ServicesComponent,
     ContactComponent,
     ProductManagerComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    ProductAddComponent
   ],
   imports: [
     BrowserModule,

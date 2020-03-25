@@ -1,4 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { ProductService } from '../services/product.service';
+import { Product } from '../Product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-product',
@@ -6,10 +9,15 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-
-  constructor() { }
+ product : Product = new Product();
+  constructor(
+    private productService :ProductService,
+    private router :Router
+  ) { }
 
   ngOnInit() {
   }
-// Logic code để nhận giá trị View
+  addProduct(){
+    this.productService.addCartProduct(this.product).subscribe(data => this.router.navigateByUrl('/manager'))
+  }
 }
