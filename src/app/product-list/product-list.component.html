@@ -11,7 +11,7 @@
             </h4>
             <h5>${{product.price}}</h5>
             <p class="card-text">{{product.desc}}</p>
-            <button (click)="showDetail(product)">Chi tiết</button>
+            <button routerLink="/product/{{product.id}}">Chi tiết</button>
             <button (click)="removeItem(product.id)">Xóa</button>
         </div>
         </div>
