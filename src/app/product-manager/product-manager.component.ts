@@ -22,7 +22,7 @@ export class ProductManagerComponent implements OnInit {
   getProducts() {
     this.productService
       .getProducts()
-      .subscribe(response => (this.products = response));
+      .subscribe(response => (this.product = response));
   }
   removeItem(id){
    this.productService.removeProduct(id).subscribe(response => {
