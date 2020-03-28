@@ -17,7 +17,7 @@ export class ProductService {
     return this.http.get<Product>(`${this.api}/product/${id}`);
   }
   removeProduct(id) :Observable<Product> {
-    return this.http.delete<Product>(`${this.api}/product/${id}`)
+    return this.http.get<Product>(`${this.api}/product/${id}`)
   }
   addProduct(product) {
     console.log(product);

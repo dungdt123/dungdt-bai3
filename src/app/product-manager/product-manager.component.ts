@@ -24,10 +24,9 @@ export class ProductManagerComponent implements OnInit {
       .getProducts()
       .subscribe(response => (this.products = response));
   }
-  deleteProduct(id) {
-    this.productService.deleteProduct(id).subscribe(data => this.router.navigateByUrl('/manager')
-      
-    )
-  
-  }
+  removeItem(id){
+   this.productService.removeProduct(id).subscribe(response => {
+     this.product = this.product.filter(product => product.id != response.id);
+   })
+}
 }
